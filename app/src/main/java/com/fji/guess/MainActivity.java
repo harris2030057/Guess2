@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
 
 import java.util.Random;
 
@@ -24,13 +26,10 @@ public void guess(View view){
 
 
     if(i2<i1){
-        new AlertDialog.Builder(this)
-                .setMessage("小一點")
-                .show();
+        Toast.makeText(MainActivity.this, "小一點", Toast.LENGTH_SHORT).show();
+
     }else if (i2>i1){
-        new AlertDialog.Builder(this)
-                .setMessage("大一點")
-                .show();
+        Toast.makeText(MainActivity.this, "大一點", Toast.LENGTH_SHORT).show()
     } else {
         new AlertDialog.Builder(this)
                 .setMessage("答對了")
